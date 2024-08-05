@@ -1,0 +1,151 @@
+.editpage{
+    width: 1085px;
+    header{
+        margin: 14px 0 12px 0;
+        h2{
+            font-size: 40px;
+            font-weight: 500;
+            text-align: center;
+        }
+    }
+    .question-place{
+        width: 100%;
+        height: 378px;
+        border: 1px solid #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        textarea{
+            width: 800px;
+            height: 200px;
+            font-size: 40px;
+        }
+    }
+    .answer-place{
+        width: 1085px;
+        height: 389px;
+        margin: 60px 0 43px 0;
+        .answer-place-r1{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            .answerA,.answerB{
+                width: 419px;
+                height: 154px;
+                border: 1px solid #333;
+                position: relative;
+                .answer{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    div{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        font-size: 40px;
+                        justify-content: center;
+                        align-items: center;
+                        input{
+                            width: 250px;
+                            font-size: 40px;
+                            padding: 0 20px;
+                        }
+                    }
+                }
+                .check-correct{
+                    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 100%;
+                    border: 1px solid #333;
+                    cursor: pointer;
+                    // background-color: #46D722;
+                    background-color: #fff;
+                    top: 15px;
+                    left: 15px;
+                }
+            }
+        }
+        .answer-place-r2{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            .answerC,.answerD{
+                width: 419px;
+                height: 154px;
+                border: 1px solid #333;
+                position: relative;
+                .answer{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    div{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        font-size: 40px;
+                        justify-content: center;
+                        align-items: center;
+                        input{
+                            width: 250px;
+                            font-size: 40px;
+                            padding: 0 20px;
+                        }
+                    }
+                }
+                .check-correct{
+                    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 100%;
+                    border: 1px solid #333;
+                    cursor: pointer;
+                    // background-color: #46D722;
+                    background-color: #fff;
+                    top: 15px;
+                    left: 15px;
+                }
+            }
+        }
+        
+    }
+    .button-place{
+        display: flex;
+        flex-direction: row;
+        gap: 306px;
+        .back-button{
+            width: 137px;
+            height: 80px;
+            font-size: 40px;
+            background-color: #fff;
+            color: #333;
+        }
+        .delete-button{
+            width: 200px;
+            height: 80px;
+            font-size: 40px;
+            background-color: #fff;
+            color: #333;
+        }
+    }
+}
+
+
+.active-correct{
+    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 100%;
+                    border: 1px solid #333;
+                    cursor: pointer;
+                    background-color: #46D722;
+                    // background-color: #fff;
+                    top: 15px;
+                    left: 15px;
+}

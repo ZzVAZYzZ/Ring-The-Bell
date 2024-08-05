@@ -1,0 +1,146 @@
+.editpage {
+  width: 1085px;
+}
+.editpage header {
+  margin: 14px 0 12px 0;
+}
+.editpage header h2 {
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+}
+.editpage .question-place {
+  width: 100%;
+  height: 378px;
+  border: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.editpage .question-place textarea {
+  width: 800px;
+  height: 200px;
+  font-size: 40px;
+}
+.editpage .answer-place {
+  width: 1085px;
+  height: 389px;
+  margin: 60px 0 43px 0;
+}
+.editpage .answer-place .answer-place-r1 {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.editpage .answer-place .answer-place-r1 .answerA, .editpage .answer-place .answer-place-r1 .answerB {
+  width: 419px;
+  height: 154px;
+  border: 1px solid #333;
+  position: relative;
+}
+.editpage .answer-place .answer-place-r1 .answerA .answer, .editpage .answer-place .answer-place-r1 .answerB .answer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.editpage .answer-place .answer-place-r1 .answerA .answer div, .editpage .answer-place .answer-place-r1 .answerB .answer div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.editpage .answer-place .answer-place-r1 .answerA .answer div input, .editpage .answer-place .answer-place-r1 .answerB .answer div input {
+  width: 250px;
+  font-size: 40px;
+  padding: 0 20px;
+}
+.editpage .answer-place .answer-place-r1 .answerA .check-correct, .editpage .answer-place .answer-place-r1 .answerB .check-correct {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 1px solid #333;
+  cursor: pointer;
+  background-color: #fff;
+  top: 15px;
+  left: 15px;
+}
+.editpage .answer-place .answer-place-r2 {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.editpage .answer-place .answer-place-r2 .answerC, .editpage .answer-place .answer-place-r2 .answerD {
+  width: 419px;
+  height: 154px;
+  border: 1px solid #333;
+  position: relative;
+}
+.editpage .answer-place .answer-place-r2 .answerC .answer, .editpage .answer-place .answer-place-r2 .answerD .answer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.editpage .answer-place .answer-place-r2 .answerC .answer div, .editpage .answer-place .answer-place-r2 .answerD .answer div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.editpage .answer-place .answer-place-r2 .answerC .answer div input, .editpage .answer-place .answer-place-r2 .answerD .answer div input {
+  width: 250px;
+  font-size: 40px;
+  padding: 0 20px;
+}
+.editpage .answer-place .answer-place-r2 .answerC .check-correct, .editpage .answer-place .answer-place-r2 .answerD .check-correct {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 1px solid #333;
+  cursor: pointer;
+  background-color: #fff;
+  top: 15px;
+  left: 15px;
+}
+.editpage .button-place {
+  display: flex;
+  flex-direction: row;
+  gap: 306px;
+}
+.editpage .button-place .back-button {
+  width: 137px;
+  height: 80px;
+  font-size: 40px;
+  background-color: #fff;
+  color: #333;
+}
+.editpage .button-place .delete-button {
+  width: 200px;
+  height: 80px;
+  font-size: 40px;
+  background-color: #fff;
+  color: #333;
+}
+
+.active-correct {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 1px solid #333;
+  cursor: pointer;
+  background-color: #46D722;
+  top: 15px;
+  left: 15px;
+}/*# sourceMappingURL=editpage.css.map */

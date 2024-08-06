@@ -1,4 +1,4 @@
-.editpage{
+.playpage{
     width: 1085px;
     header{
         margin: 14px 0 12px 0;
@@ -15,11 +15,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        textarea{
-            width: 800px;
-            height: 200px;
-            font-size: 40px;
-        }
+        font-size: 40px;
+        padding: 15px;
     }
     .answer-place{
         width: 1085px;
@@ -36,9 +33,7 @@
                 width: 419px;
                 height: 154px;
                 border: 1px solid #333;
-                position: relative;
                 .answer{
-                    position: absolute;
                     width: 100%;
                     height: 100%;
                     div{
@@ -48,23 +43,7 @@
                         font-size: 40px;
                         justify-content: center;
                         align-items: center;
-                        input{
-                            width: 250px;
-                            font-size: 40px;
-                            padding: 0 20px;
-                        }
                     }
-                }
-                .check-correct{
-                    position: absolute;
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 100%;
-                    border: 1px solid #333;
-                    cursor: pointer;
-                    background-color: #fff;
-                    top: 15px;
-                    left: 15px;
                 }
             }
         }
@@ -79,9 +58,7 @@
                 width: 419px;
                 height: 154px;
                 border: 1px solid #333;
-                position: relative;
                 .answer{
-                    position: absolute;
                     width: 100%;
                     height: 100%;
                     div{
@@ -91,24 +68,7 @@
                         font-size: 40px;
                         justify-content: center;
                         align-items: center;
-                        input{
-                            width: 250px;
-                            font-size: 40px;
-                            padding: 0 20px;
-                        }
                     }
-                }
-                .check-correct{
-                    position: absolute;
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 100%;
-                    border: 1px solid #333;
-                    cursor: pointer;
-                    // background-color: #46D722;
-                    background-color: #fff;
-                    top: 15px;
-                    left: 15px;
                 }
             }
         }
@@ -117,8 +77,9 @@
     .button-place{
         display: flex;
         flex-direction: row;
-        gap: 306px;
-        .back-button{
+        justify-content: flex-end;
+        gap: 305px;
+        .next-button{
             width: 137px;
             height: 80px;
             font-size: 40px;
@@ -126,35 +87,27 @@
             color: #333;
             cursor: pointer;
         }
-        .delete-button{
+        div{
             width: 200px;
             height: 80px;
             font-size: 40px;
-            background-color: #fff;
-            color: #333;
-            cursor: pointer;
-        }
-        .save-button{
-            width: 200px;
-            height: 80px;
-            font-size: 40px;
-            background-color: #fff;
-            color: #333;
-            cursor: pointer;
+            color: #fff;
+            background-color: #30DD05;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 }
 
 
-.active-correct{
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    border: 1px solid #333;
-    cursor: pointer;
-    background-color: #46D722;
-    // background-color: #fff;
-    top: 15px;
-    left: 15px;
+
+.correct{
+    background-color: #30DD05;
+    color: #fff;
+}
+
+.uncorrect{
+    background: #FF1616;
+    color: #fff;
 }

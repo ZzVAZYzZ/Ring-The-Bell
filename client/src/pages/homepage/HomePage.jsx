@@ -2,14 +2,20 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"; 
 import "./scss/homepage.css"
 import { useSelector, useDispatch } from 'react-redux'
-import { addQuiz } from "../../Global/counter/quizSlice";
+import { addQuiz, disFlagment, setBoxId, getQuizData } from "../../Global/counter/quizSlice";
 
 export function HomePage() {
-    const quizes = useSelector((state) => state.quizes)
+    const quizes = useSelector((state) => state.quizes.quizes)
+    const flagment = useSelector((state) => state.quizes.flagment)
     const dispatch = useDispatch()
 
-    const [numberQuiz,setNumberQuiz] = useState(1);
-    const [quizChoice,setQuizChoice] = useState("trBox1");
+    const [numberQuiz,setNumberQuiz] = useState(quizes.length);
+    const [quizChoice,setQuizChoice] = useState("");
+
+    useEffect(()=>{
+        console.log(flagment);
+        
+      },[])
 
     useEffect(()=>{
         const currentBox = {
@@ -21,14 +27,24 @@ export function HomePage() {
             answerD: "",
             correctAnswer: ""
         }
-        dispatch(addQuiz(currentBox))
+        if (flagment===false) {
+            dispatch(addQuiz(currentBox))
+        }
+        
     },[numberQuiz])
 
     useEffect(()=>{
         console.log(quizes);
     },[quizes])
 
+    useEffect(()=>{
+        dispatch(setBoxId(quizChoice))
+        // console.log(quizChoice);
+        
+    },[quizChoice])
+
     function handleQuizClick(e){
+        
         setQuizChoice(e.target.id);
     }
 
@@ -58,6 +74,7 @@ export function HomePage() {
       };
 
     function handleCreateClick(){
+        dispatch(disFlagment());
         if(numberQuiz<27){
             setNumberQuiz(numberQuiz+1)
             
@@ -74,15 +91,17 @@ export function HomePage() {
                 <div>
                     <div className="createstartplace">
                         <button onClick={handleCreateClick}>CREATE</button>
-                        <button>START</button>
+                        <Link to={quizes.length!==0?"/play":"/"}>
+                            <button>START</button>
+                        </Link>
                     </div>
                     <div className="tr">
                         {renderQuizzes()}
                     </div>
                     
                     <div className="editplace">
-                    <Link to="/edit">
-                        <button>EDIT</button>
+                    <Link to={quizChoice===""?"/":"/edit"}>
+                        <button onClick={()=>dispatch(getQuizData())}>EDIT</button>
                     </Link>
                     </div>
                 </div>

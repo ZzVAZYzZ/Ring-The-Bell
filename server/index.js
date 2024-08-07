@@ -18,6 +18,20 @@ let team = "1"
 
 connectDb();
 
+app.get('/', (req, res) => {
+    res.json({
+        mess: "hello world"
+    });
+});
+
+app.post('/test', (req, res) => {
+    console.log(req.body);
+    
+    res.json({
+        mess: "hello world"
+    });
+});
+
 app.get('/getTeam', (req, res) => {
     res.json({
         team

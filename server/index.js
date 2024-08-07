@@ -14,7 +14,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 const dotenv = require("dotenv").config();
 
-let team = "1"
+let team = "0"
+let globalFlag = false;
 
 connectDb();
 
@@ -54,13 +55,19 @@ app.post('/postResult', async (req, res) => {
 
 app.post('/resetTeam', (req, res) => {
     team = "0";
-    res.status(201).send("Team is reseted");
+    globalFlag = false;
+    res.status(201).send("reseted team");
+});
+
+app.post('/updateTeamStateWemos', (req, res) => {
+    res.status(201).send({flag: globalFlag});
 });
 
 app.post('/setTeam',  (req, res) => {
     const { chooseTeam } =  req.body;
     team=chooseTeam;
-    res.status(201).send(req.body);
+    globalFlag = true;
+    res.status(201).send({flag: true});
 });
 
 var server = app.listen(8000, function () {

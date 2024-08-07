@@ -17,17 +17,21 @@ export function PlayPage() {
   function handleChooseAnswer(e, a) {
     const element = e.currentTarget;
 
-    if (quizes[quizCount].correctAnswer === a) {
+    if(team!=="0"){
+      if (quizes[quizCount].correctAnswer === a) {
 
-      postResult(a,"CORRECT")
-
-
-      dispatch(increaseChooseCorrect());
-      element.classList.add("correct");
-    } else {
-      postResult(a,"UNCORRECT")
-      element.classList.add("uncorrect");
+        postResult(a,"CORRECT")
+  
+  
+        dispatch(increaseChooseCorrect());
+        element.classList.add("correct");
+      } else {
+        postResult(a,"UNCORRECT")
+        element.classList.add("uncorrect");
+      }
     }
+
+    
   }
 
   function postResult(answer,result){
